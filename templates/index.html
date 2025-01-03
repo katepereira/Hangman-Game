@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hangman Game</h1>
+    <h3>Guess the word, save the stickman! 🎯🔤</h3>
+
+    <!-- Category selection section -->
+    <div id="category-selection">
+        <h2>Select a Category</h2>
+        <div class="category-buttons">
+            <button class="category-button" onclick="startGame('Animals')">Animals</button>
+            <button class="category-button" onclick="startGame('Countries')">Countries</button>
+            <button class="category-button" onclick="startGame('Movies')">Movies</button>
+            <button class="category-button" onclick="startGame('Sports')">Sports</button>
+            <button class="category-button" onclick="startGame('Technology')">Technology</button>
+        </div>
+    </div>
+
+    <!-- Game area section -->
+    <div id="game-area" style="display: none;">
+        <div class="game-container">
+            <!-- Hangman art and word display next to each other -->
+            <div class="hangman">
+                <div class="ascii-art" id="hangman-art"></div>
+            </div>
+
+            <div class="game-info">
+                <div class="blanks" id="word-display"></div>
+                <input type="text" id="guess-input" placeholder="Enter a letter" maxlength="1">
+                <button onclick="makeGuess()">Guess</button>
+                <button onclick="getHint()">Hint</button>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

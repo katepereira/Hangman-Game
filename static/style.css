@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: repeating-linear-gradient(  45deg,
+    #ff9a9e,
+    #ff9a9e 15px,
+    #fbc8d4 15px,
+    #fbc8d4 30px,
+    #fecfef 30px,
+    #fecfef 45px);
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    background-size: 300% 300%;
+    animation: gradientMovement 300s ease infinite;
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-bottom: -40px;
+    text-align: center;
+    color: #e60505;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ascii-art {
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre;
+    font-size: 24px;
+    line-height: 1.8;
+    margin: 40px 0;
+    color: #141313;
+    font-weight: bolder;
+}
+
+.blanks {
+    font-size: 36px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    margin: 20px 20px;
+    padding-top: -50px;
+    color: #444;
+}
+
+input[type="text"] {
+    font-size: 24px;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #161b20;
+}
+
+button {
+    font-size: 24px;
+    padding: 12px 30px;
+    margin: 15px 15px;
+    color: #fff;
+    background-color: #cc2b20;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#message {
+    margin: 30px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.hangman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    margin-top: 70px;
+    font-size: 16px;
+    color: #888;
+}
